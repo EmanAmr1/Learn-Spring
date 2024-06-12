@@ -20,7 +20,7 @@
         <property name="id" value="2"/>
     </bean>  -->
 
-    <bean id="student" class="org.spring.DI.Student">
+   <!-- <bean id="student" class="org.spring.DI.Student">
         <constructor-arg name="studentName" value="Eman"/>
         <constructor-arg name="id" value="1"/>
     </bean>
@@ -29,7 +29,17 @@
     <bean id="student2" class="org.spring.DI.Student">
         <constructor-arg name="studentName" value="Amr"/>
         <constructor-arg name="id" value="2"/>
+    </bean> -->
+
+    <bean id="student" class="org.spring.DI.Student">
+        <property name="mathLearn" >
+            <bean class="org.spring.DI.MathLearn"></bean>
+        </property>
+        <property name="studentName" value="Amr"/>
+        <property name="id" value="2"/>
     </bean>
+
+
 
 
 

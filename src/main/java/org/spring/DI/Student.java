@@ -3,10 +3,14 @@ package org.spring.DI;
 public class Student {
 
 
+    private  MathLearn mathLearn;
     private int id;
+    private String StudentName;
 
-   private String StudentName;
 
+    public Student() {
+
+    }
 
     public Student(int id, String studentName) {
         this.id = id;
@@ -14,11 +18,15 @@ public class Student {
     }
 
     public void displayStudentInfo(){
-        System.out.println("Student name is : "+ StudentName +" and id "+id);
+        System.out.println("Student name is : "+ StudentName +" and id "+id );
 
     }
 
-  /*  public int getId() {
+    public void math(){
+        mathLearn.MathLearn();
+    }
+
+    public int getId() {
         return id;
     }
 
@@ -32,5 +40,13 @@ public class Student {
 
     public void setStudentName(String studentName) {
         StudentName = studentName;
-    }*/
+    }
+
+    public MathLearn getMathLearn() {
+        return mathLearn;
+    }
+
+    public void setMathLearn(MathLearn mathLearn) {
+        this.mathLearn = mathLearn;
+    }
 }
