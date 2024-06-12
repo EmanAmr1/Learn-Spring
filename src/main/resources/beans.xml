@@ -11,5 +11,13 @@
 
     <bean id="student" class="org.spring.DI.Student">
         <property name="studentName" value="Eman"/>
+        <property name="id" value="1"/>
     </bean>
+
+
+    <bean id="student2" class="org.spring.DI.Student">
+        <property name="studentName" value="Amr"/>
+        <property name="id" value="2"/>
+    </bean>
+
 </beans>
