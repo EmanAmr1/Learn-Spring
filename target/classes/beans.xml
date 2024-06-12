@@ -6,6 +6,10 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean  id="airtel" class="org.spring.ioc.Airtel" ></bean>
+    <bean  id="airtel" class="org.spring.ioc.Airtel" ></bean>
 
-    </beans>
+
+    <bean id="student" class="org.spring.DI.Student">
+        <property name="studentName" value="Eman"/>
+    </bean>
+</beans>
