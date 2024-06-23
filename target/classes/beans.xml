@@ -32,11 +32,11 @@
     </bean> -->
 
     <bean  id="mathLearnObj" class="org.spring.DI.MathLearn"></bean>
-
+    <bean  id="ArabicLearnObj"   class="org.spring.DI.ArabicLearn" > </bean>
 
 
     <bean id="student" class="org.spring.DI.Student">
-        <property name="mathLearn" ref="mathLearnObj"/>
+        <property name="learning"  ref="mathLearnObj" />
         <property name="studentName" value="Amr"/>
         <property name="id" value="2"/>
     </bean>

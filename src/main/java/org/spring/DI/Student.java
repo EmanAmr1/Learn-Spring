@@ -2,10 +2,18 @@ package org.spring.DI;
 
 public class Student {
 
-
-    private  MathLearn mathLearn;
+    private  Learn learning;
     private int id;
     private String StudentName;
+
+
+    public void displayStudentInfo(){
+        System.out.println("Student name is : "+ StudentName +" and id "+id );
+    }
+    public void myLearn(){
+        learning.learn();
+    }
+
 
 
     public Student() {
@@ -17,36 +25,21 @@ public class Student {
         StudentName = studentName;
     }
 
-    public void displayStudentInfo(){
-        System.out.println("Student name is : "+ StudentName +" and id "+id );
 
-    }
-
-    public void math(){
-        mathLearn.Learn();
-    }
-
-    public int getId() {
-        return id;
+    public void setLearning(Learn learning) {
+        this.learning = learning;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getStudentName() {
-        return StudentName;
-    }
 
     public void setStudentName(String studentName) {
         StudentName = studentName;
     }
 
-    public MathLearn getMathLearn() {
-        return mathLearn;
-    }
 
-    public void setMathLearn(MathLearn mathLearn) {
-        this.mathLearn = mathLearn;
-    }
+
+
 }

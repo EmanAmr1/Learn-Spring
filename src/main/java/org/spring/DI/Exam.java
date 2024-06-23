@@ -11,7 +11,8 @@ public class Exam {
        Student s= context.getBean("student",Student.class);
       // s.setStudentName("eman");
        s.displayStudentInfo();
-       s.math();
+       s.myLearn();
+
        // Student s2= context.getBean("student2",Student.class);
        //s2.displayStudentInfo();
     }
