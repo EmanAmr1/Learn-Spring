@@ -23,7 +23,7 @@ public class Student {
     }
 
     public void math(){
-        mathLearn.MathLearn();
+        mathLearn.Learn();
     }
 
     public int getId() {
