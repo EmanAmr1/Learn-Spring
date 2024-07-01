@@ -8,6 +8,12 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "org.spring.college")
 public class CollegeConfig {
 
+/*
+    @Bean
+    public Teacher mathTeacherBean(){
+     return  new MathTeacher();
+    }
+
     @Bean
     public Principal principalBean(){
         return new Principal();
@@ -19,7 +25,8 @@ public class CollegeConfig {
     public College collegeBean(){ //collegeBean - bean id
       College c=new College();
       c.setPrincipal(principalBean());
+      c.setTeacher(mathTeacherBean());
     return c;
    }
-
+*/
 }
