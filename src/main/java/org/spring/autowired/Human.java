@@ -10,14 +10,17 @@ public class Human {
     public Human() {
     }
 
-    @Autowired
+   
     public Human(Heart heart) {
         this.heart = heart;
         System.out.println("human constructor is getting called");
     }
 
+    @Autowired
     public void setHeart(Heart heart) {
+
         this.heart = heart;
+        System.out.println("human setter is getting called");
     }
 
     public Heart getHeart() {

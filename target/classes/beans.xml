@@ -69,7 +69,7 @@
     </bean>-->
 
     <bean id="heartObj" class="org.spring.autowired.Heart"></bean>
-   
+
     <bean id="humanObj"  class="org.spring.autowired.Human" >
 
     </bean>
