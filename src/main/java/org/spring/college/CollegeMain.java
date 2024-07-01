@@ -8,7 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class CollegeMain {
     public static void main(String[] args) {
         ApplicationContext context =new AnnotationConfigApplicationContext(CollegeConfig.class);
-        College c =context.getBean("collegeClass",College.class);
-       System.out.println("the college object created by spring is:" +c);
+        College c =context.getBean("collegeBean",College.class);
+        System.out.println("the college object created by spring is:" +c);
+        c.test();
     }
 }
