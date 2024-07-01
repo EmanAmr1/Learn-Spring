@@ -68,7 +68,15 @@
 
     </bean>-->
 
-    <bean id="heartObj" class="org.spring.autowired.Heart"></bean>
+    <bean id="heartObj1" class="org.spring.autowired.Heart">
+        <property name="name" value="animal" />
+        <property name="noOfHeart" value="3"/>
+    </bean>
+
+    <bean id="heartObj2" class="org.spring.autowired.Heart">
+        <property name="name" value="human" />
+        <property name="noOfHeart" value="3"/>
+    </bean>
 
     <bean id="humanObj"  class="org.spring.autowired.Human" >
 
