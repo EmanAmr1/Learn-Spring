@@ -16,9 +16,16 @@ public class College {
     }
 
 
-    public College(Principal principal) {
+    /*public College(Principal principal) {
         this.principal = principal;
+    }*/
+
+    public Principal getPrincipal() {
+        return principal;
     }
 
-
+    public void setPrincipal(Principal principal) {
+        this.principal = principal;
+        System.out.println("using setPrincipal method");
+    }
 }
