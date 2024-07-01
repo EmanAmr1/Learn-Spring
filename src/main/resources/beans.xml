@@ -48,11 +48,21 @@
         <property name="heart" ref="heartObj" />
     </bean> -->
 
+    <!--
+     <bean id="heartObj" class="org.spring.autowired.Heart"></bean>-->
+     <!-- autowiring by TYPE -->
+   <!-- <bean id="humanObj"  class="org.spring.autowired.Human" autowire="byType">
+
+    </bean> -->
+
+
     <bean id="heartObj" class="org.spring.autowired.Heart"></bean>
-    <!-- autowiring by TYPE -->
-    <bean id="humanObj"  class="org.spring.autowired.Human" autowire="byType">
+    <!-- autowiring by CONSTRUCTOR -->
+    <bean id="humanObj"  class="org.spring.autowired.Human" autowire="constructor">
 
     </bean>
+
+
 
 
 </beans>
