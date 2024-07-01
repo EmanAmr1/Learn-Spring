@@ -10,7 +10,8 @@
 
     <!-- Enable annotation-based configuration -->
     <context:annotation-config />
-<context:property-placeholder location="student.info.properties"></context:property-placeholder>
+<context:property-placeholder location="student.info.properties" />
+    <context:annotation-config />
 
     <bean  id="airtel" class="org.spring.ioc.Airtel" ></bean>
 
@@ -85,10 +86,16 @@
 <!--school-->
 
 
-    <bean id="school" class="org.spring.School.Student">
+    <!-- <bean id="school" class="org.spring.School.Student">
         <property name="name" value="${student.name}"/>
         <property name="hobby" value="${student.hobby}"/>
         <property name="insertedCourse" value="${student.insertedCourse}"/>
+    </bean> -->
+
+
+    <bean id="school" class="org.spring.School.Student">
+
     </bean>
+
 
 </beans>

@@ -1,5 +1,7 @@
 package org.spring.School;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class Student {
     private String name;
     private String insertedCourse;
@@ -20,6 +22,7 @@ public class Student {
         return name;
     }
 
+    @Value("emii")
     public void setName(String name) {
         this.name = name;
     }
@@ -28,6 +31,7 @@ public class Student {
         return insertedCourse;
     }
 
+    @Value("java")
     public void setInsertedCourse(String insertedCourse) {
         this.insertedCourse = insertedCourse;
     }
@@ -36,6 +40,7 @@ public class Student {
         return hobby;
     }
 
+    @Value("draw")
     public void setHobby(String hobby) {
         this.hobby = hobby;
     }
