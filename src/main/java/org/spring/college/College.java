@@ -1,10 +1,16 @@
 package org.spring.college;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component("collegeClass")
+@PropertySource("classpath:college.info.properties")
 public class College {
+
+    @Value("${collage.collegeName}")
+    private String collegeName;
 
     @Autowired
     private  Teacher teacher;
@@ -16,6 +22,7 @@ public class College {
         principal.principalInfo();
         teacher.teach();
         System.out.println("testing this class method");
+        System.out.println("my college name is " + collegeName);
 
     }
     public College() {
