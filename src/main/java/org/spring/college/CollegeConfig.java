@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "org.spring.college")
 public class CollegeConfig {
 
-    @Bean(name = "colBean")
+    @Bean(name = {"colBean","colBeanAnother"})
     public College collegeBean(){ //collegeBean - bean id
       College c=new College();
     return c;
