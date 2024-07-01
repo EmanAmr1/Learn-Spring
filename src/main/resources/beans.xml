@@ -42,15 +42,15 @@
     </bean>
 
 
-    <bean id="heart" class="org.spring.autowired.Heart"></bean> <!-- id=heart lazem ykon nafs name ely mawgod fe el class-->
+    <!--<bean id="heart" class="org.spring.autowired.Heart"></bean> --> <!-- id=heart lazem ykon nafs name ely mawgod fe el class-->
 
     <!-- <bean id="humanObj"  class="org.spring.autowired.Human">
         <property name="heart" ref="heartObj" />
     </bean> -->
 
-
-    <!-- autowiring by name -->
-    <bean id="humanObj"  class="org.spring.autowired.Human" autowire="byName">
+    <bean id="heartObj" class="org.spring.autowired.Heart"></bean>
+    <!-- autowiring by TYPE -->
+    <bean id="humanObj"  class="org.spring.autowired.Human" autowire="byType">
 
     </bean>
 
