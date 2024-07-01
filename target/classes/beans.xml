@@ -12,6 +12,8 @@
     <context:annotation-config />
 <context:property-placeholder location="student.info.properties" />
     <context:annotation-config />
+    
+    <context:component-scan base-package="org.spring.college"></context:component-scan>
 
     <bean  id="airtel" class="org.spring.ioc.Airtel" ></bean>
 
@@ -96,6 +98,9 @@
     <bean id="school" class="org.spring.School.Student">
 
     </bean>
+
+
+    <!--college-->
 
 
 </beans>

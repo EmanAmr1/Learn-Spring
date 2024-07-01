@@ -22,5 +22,5 @@ public class Student {
         System.out.println("name is:" +name+" inserted course: " + insertedCourse +" hobby:" +hobby);
     }
 
-    
+
 }
