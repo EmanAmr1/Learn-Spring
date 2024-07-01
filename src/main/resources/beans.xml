@@ -13,7 +13,7 @@
 <context:property-placeholder location="student.info.properties" />
     <context:annotation-config />
     
-    <context:component-scan base-package="org.spring.college" />
+   <!-- <context:component-scan base-package="org.spring.college" /> -->
 
     <bean  id="airtel" class="org.spring.ioc.Airtel" ></bean>
 
