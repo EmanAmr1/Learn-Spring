@@ -7,9 +7,13 @@ import org.springframework.beans.factory.annotation.Value;
 public class Student {
 
 
-
+    @Value("${student.name}")
     private String name;
+
+    @Value("${student.insertedCourse}")
     private String insertedCourse;
+
+    @Value("${student.hobby}")
     private String hobby;
 
 
@@ -18,35 +22,5 @@ public class Student {
         System.out.println("name is:" +name+" inserted course: " + insertedCourse +" hobby:" +hobby);
     }
 
-
-
-
-
-
-    public String getName() {
-        return name;
-    }
-
-    @Value("${student.name}")
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getInsertedCourse() {
-        return insertedCourse;
-    }
-
-    @Value("${student.insertedCourse}")
-    public void setInsertedCourse(String insertedCourse) {
-        this.insertedCourse = insertedCourse;
-    }
-
-    public String getHobby() {
-        return hobby;
-    }
-
-    @Value("${student.hobby}")
-    public void setHobby(String hobby) {
-        this.hobby = hobby;
-    }
+    
 }
