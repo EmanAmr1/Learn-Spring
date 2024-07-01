@@ -9,24 +9,7 @@ public class Human {
     private Heart heart;
 
 
-    public Human() {
-    }
-
-
-    public Human(Heart heart) {
-        this.heart = heart;
-        System.out.println("human constructor is getting called");
-    }
-
-
-    public void setHeart(Heart heart) {
-        this.heart = heart;
-        System.out.println("human setter is getting called");
-    }
-
-    public Heart getHeart() {
-        return heart;
-    }
+ 
 
     public void startPumping(){
         if (heart!=null){
