@@ -9,7 +9,7 @@ public class Human {
     private Heart heart;
 
 
- 
+
 
     public void startPumping(){
         if (heart!=null){
