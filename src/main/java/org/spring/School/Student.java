@@ -1,8 +1,13 @@
 package org.spring.School;
 
+import jdk.jfr.Frequency;
+import org.springframework.beans.factory.annotation.Required;
 import org.springframework.beans.factory.annotation.Value;
 
 public class Student {
+
+
+
     private String name;
     private String insertedCourse;
     private String hobby;
@@ -22,7 +27,7 @@ public class Student {
         return name;
     }
 
-    @Value("emii")
+    @Value("${student.name}")
     public void setName(String name) {
         this.name = name;
     }
@@ -31,7 +36,7 @@ public class Student {
         return insertedCourse;
     }
 
-    @Value("java")
+    @Value("${student.insertedCourse}")
     public void setInsertedCourse(String insertedCourse) {
         this.insertedCourse = insertedCourse;
     }
@@ -40,7 +45,7 @@ public class Student {
         return hobby;
     }
 
-    @Value("draw")
+    @Value("${student.hobby}")
     public void setHobby(String hobby) {
         this.hobby = hobby;
     }
