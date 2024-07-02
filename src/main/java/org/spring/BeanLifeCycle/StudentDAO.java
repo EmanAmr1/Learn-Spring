@@ -1,4 +1,5 @@
 package org.spring.BeanLifeCycle;
+import javax.annotation.PostConstruct;
 
 import java.sql.*;
 
@@ -8,14 +9,29 @@ public class StudentDAO {
     private String userName;
     private String password;
 
-    public void selectAllRows() throws ClassNotFoundException, SQLException {
+    //connection obj
+    Connection con;
+
+    @PostConstruct
+    public void createStudentDBConnection() throws ClassNotFoundException, SQLException {
+        //load driver
+        Class.forName(driver);
+
+        //get  connection
+          con= DriverManager.getConnection(url,userName,password);
+
+    }
+
+    public void closeConnection() throws SQLException {
+        //clothing the connection
+        con.close();
+    }
+
+
+
+    public void selectAllRows() throws  SQLException {
 
         System.out.println("Retriving all Students data");
-       //load driver
-       Class.forName(driver);
-
-       //get  connection
-      Connection con= DriverManager.getConnection(url,userName,password);
 
         //execute query
        Statement stmt= con.createStatement();
@@ -24,24 +40,19 @@ public class StudentDAO {
 
       while (rs.next()) {
           int studentId = rs.getInt(1);
-         String studentName= rs.getString(2);
-         double hotelFees =rs.getDouble(3);
-       String foodType=  rs.getString(4);
+          String studentName= rs.getString(2);
+          double hotelFees =rs.getDouble(3);
+          String foodType=  rs.getString(4);
 
        System.out.println(studentId+ " "+ studentName + " " +hotelFees +" " +foodType);
       }
 
-        //clothing the connection
-      con.close();
+
     }
 
 
-    public void deleteStudentRecord(int studentId) throws ClassNotFoundException, SQLException {
-        //load driver
-        Class.forName(driver);
+    public void deleteStudentRecord(int studentId) throws  SQLException {
 
-        //get  connection
-        Connection con= DriverManager.getConnection(url,userName,password);
 
         //execute query
         Statement stmt= con.createStatement();
@@ -50,8 +61,7 @@ public class StudentDAO {
 
          System.out.println("Record deleted successfully with the id "+studentId);
 
-         //clothing the connection
-         con.close();
+
 
     }
 
