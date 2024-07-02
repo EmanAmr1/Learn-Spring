@@ -14,6 +14,7 @@ public class College {
     private String collegeName;
 
     @Autowired
+    @Qualifier("MathTeacher")
     private  Teacher teacher;
 
     @Autowired
