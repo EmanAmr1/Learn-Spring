@@ -9,6 +9,8 @@ public class StudentDAO {
     private String password="1234";
 
     public void selectAllRows() throws ClassNotFoundException, SQLException {
+
+        System.out.println("Retriving all Students data");
        //load driver
        Class.forName(driver);
 
@@ -28,6 +30,23 @@ public class StudentDAO {
 
        System.out.println(studentId+ " "+ studentName + " " +hotelFees +" " +foodType);
       }
+    }
+
+
+    public void deleteStudentRecord(int studentId) throws ClassNotFoundException, SQLException {
+        //load driver
+        Class.forName(driver);
+
+        //get  connection
+        Connection con= DriverManager.getConnection(url,userName,password);
+
+        //execute query
+        Statement stmt= con.createStatement();
+
+         stmt.executeUpdate("DELETE  FROM HotelStudentInfo WHERE student_id= " +studentId);
+
+         System.out.println("Record deleted successfully with the id "+studentId);
+
     }
 
 }
