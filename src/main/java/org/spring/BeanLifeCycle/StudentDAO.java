@@ -13,7 +13,7 @@ public class StudentDAO {
     //connection obj
     Connection con;
 
-    @PostConstruct
+    //@PostConstruct
     public void createStudentDBConnection() throws ClassNotFoundException, SQLException {
         System.out.println("creating connection for studentDB");
 
@@ -25,7 +25,7 @@ public class StudentDAO {
 
     }
 
-    @PreDestroy
+   // @PreDestroy
     public void closeConnection() throws SQLException {
         //clothing the connection
         System.out.println("inside destroy method");
