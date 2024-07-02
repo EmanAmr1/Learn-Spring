@@ -102,5 +102,11 @@
 
     <!--college-->
 
+    <bean id="studentDAO" class="org.spring.BeanLifeCycle.StudentDAO">
+        <property name="driver" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/esnew"/>
+        <property name="userName" value="postgres"/>
+        <property name="password" value="1234"/>
 
+    </bean>
 </beans>

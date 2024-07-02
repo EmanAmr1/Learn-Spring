@@ -3,10 +3,10 @@ package org.spring.BeanLifeCycle;
 import java.sql.*;
 
 public class StudentDAO {
-    private String driver ="org.postgresql.Driver";
-    private String url="jdbc:postgresql://localhost:5432/esnew" ;
-    private String userName="postgres";
-    private String password="1234";
+    private String driver ;
+    private String url ;
+    private String userName;
+    private String password;
 
     public void selectAllRows() throws ClassNotFoundException, SQLException {
 
@@ -30,6 +30,9 @@ public class StudentDAO {
 
        System.out.println(studentId+ " "+ studentName + " " +hotelFees +" " +foodType);
       }
+
+        //clothing the connection
+      con.close();
     }
 
 
@@ -47,6 +50,41 @@ public class StudentDAO {
 
          System.out.println("Record deleted successfully with the id "+studentId);
 
+         //clothing the connection
+         con.close();
+
     }
 
+
+    public String getDriver() {
+        return driver;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
