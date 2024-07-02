@@ -1,5 +1,6 @@
 package org.spring.BeanLifeCycle;
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 import java.sql.*;
 
@@ -14,6 +15,8 @@ public class StudentDAO {
 
     @PostConstruct
     public void createStudentDBConnection() throws ClassNotFoundException, SQLException {
+        System.out.println("creating connection for studentDB");
+
         //load driver
         Class.forName(driver);
 
@@ -22,8 +25,10 @@ public class StudentDAO {
 
     }
 
+    @PreDestroy
     public void closeConnection() throws SQLException {
         //clothing the connection
+        System.out.println("inside destroy method");
         con.close();
     }
 

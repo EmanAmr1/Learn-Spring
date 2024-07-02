@@ -10,6 +10,7 @@ public class Test {
         ApplicationContext context=new ClassPathXmlApplicationContext("beans.xml");
          StudentDAO studentDAO= context.getBean("studentDAO" ,StudentDAO.class);
        studentDAO.selectAllRows();
+        ((ClassPathXmlApplicationContext) context).close();
 
 
     }
