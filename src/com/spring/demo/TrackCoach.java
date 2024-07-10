@@ -6,6 +6,11 @@ public class TrackCoach implements Coach {
 	//define a private field for the service
 	private FortuneService fortuneService;
 	
+	
+	public TrackCoach() {
+			
+	}
+	
 	//define a constructor for dependency 
 	public TrackCoach(FortuneService thefortuneService) {
 		fortuneService=thefortuneService;	
