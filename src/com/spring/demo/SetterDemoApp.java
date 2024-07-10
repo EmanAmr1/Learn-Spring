@@ -21,6 +21,10 @@ public class SetterDemoApp {
 		//call new method for fortune
 		System.out.println(c.getDailyFortune());
 		
+		//call methods to get the literal values
+		System.out.println(c.getEmailAddress());
+		System.out.println(c.getTeam());
+		
 		//close the context
           context.close();
 
