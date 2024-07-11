@@ -1,10 +1,12 @@
 package annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class TennisPlaying implements Play {
 
 	@Override
@@ -13,5 +15,16 @@ public class TennisPlaying implements Play {
 	}
 
 
-
+	//define my init method
+	@PostConstruct
+	public void doMyStartupStuff() {
+		System.out.println("class TennisPlaying-doMyStartupStuff ");
+	}
+	
+	
+	//define my destroy method
+	@PreDestroy
+	public void doMyCleanupStuff() {
+		System.out.println("class TennisPlaying-doMyCleanupStuff ");
+	}
 }
