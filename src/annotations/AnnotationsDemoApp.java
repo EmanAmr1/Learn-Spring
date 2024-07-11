@@ -12,13 +12,13 @@ public class AnnotationsDemoApp {
 				ClassPathXmlApplicationContext("annotationsApplicationContext.xml");
 		
 		//get the bean from the container
-		//Play p =context.getBean("tennisPlaying",Play.class);
+		Play p =context.getBean("tennisPlaying",Play.class);
 		
 		//call a method in a bean
-		//System.out.println(p.getDailyPlaying());
+		System.out.println(p.getDailyPlaying());
 		
 		//close the context
-        //context.close();
+        context.close();
 		
 	}
 

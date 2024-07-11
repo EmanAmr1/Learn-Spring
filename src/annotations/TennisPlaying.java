@@ -2,7 +2,7 @@ package annotations;
 
 import org.springframework.stereotype.Component;
 
-//@Component("tennisPlaying")
+@Component
 public class TennisPlaying implements Play {
 
 	@Override
