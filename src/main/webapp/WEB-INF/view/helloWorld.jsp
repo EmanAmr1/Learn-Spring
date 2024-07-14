@@ -5,5 +5,8 @@
 hello world from spring
 <br><br>
 Student Name: ${param.studentNameField}
+<br><br>
+The Message : ${message}
+
 </body>
 </html>
