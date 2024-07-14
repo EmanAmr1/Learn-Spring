@@ -1,9 +1,10 @@
 package annotations;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class JavaConfigDemoApp {
+import com.spring.demo.Coach;
+
+public class SwimJavaConfigDemoApp {
 
 	public static void main(String[] args) {
 		
@@ -12,11 +13,11 @@ public class JavaConfigDemoApp {
 				AnnotationConfigApplicationContext(SportConfig.class);
 		
 		//get the bean from the container
-		Play p =context.getBean("tennisPlaying",Play.class);
+		Coach theCoach =context.getBean("swimCoach",Coach.class); //the bean that i declare in SwimConfig.java
 		
 		//call a method in a bean
-		System.out.println(p.getDailyPlaying());
-		
+		System.out.println(theCoach.getDailyWorkOut());
+		System.out.println(theCoach.getDailyFortune());
 		//close the context
         context.close();
 		
