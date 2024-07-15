@@ -24,8 +24,12 @@ c# <form:radiobutton path="favouriteLanguage" value="c#" />
 php <form:radiobutton path="favouriteLanguage" value="php" />
 ruby <form:radiobutton path="favouriteLanguage" value="ruby" />
 
+<br> <br>
+Operating Systems:
 
-
+Linx <form:checkbox path="operatingSystems" value="Linux" />
+Mac <form:checkbox path="operatingSystems" value="Mac" />
+Windows <form:checkbox path="operatingSystems" value="Windows" />
 </form:form>
 </body>
 </html>
