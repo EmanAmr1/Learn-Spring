@@ -15,5 +15,7 @@
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-core-5.3.22.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-web-5.3.22.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/spring-webmvc-5.3.22.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/hibernate-validator-5.2.4.Final-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
