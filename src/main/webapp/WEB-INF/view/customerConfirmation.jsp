@@ -4,9 +4,16 @@
 <html>
 <head><title> Customer Confirmation </title></head>
 <body>
-The Customer is Confirmed: ${student.firstName}  ${student.lastName} 
+The Customer is Confirmed: ${customer.firstName}  ${customer.lastName} 
 <br> <br>
 
-free passes : ${student.freePasses}
+free passes : ${customer.freePasses}
+
+<br> <br>
+
+Postal Code : ${customer.postalCode}
+
+
+
 </body>
 </html>
