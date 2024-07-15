@@ -9,6 +9,6 @@ The Student is Confirmed: ${student.firstName}  ${student.lastName}
 <br> <br>
 
 Country: ${student.country} 
-
+Favourite Language : ${student.favouriteLanguage} 
 </body>
 </html>
