@@ -1,12 +1,10 @@
 package com.luv2code.hibernate.demo;
 
 import java.lang.module.Configuration;
-import java.util.List;
 
 import com.luv2code.hibernate.demo.entity.Student;
 
-public class UpdateStudentDemo {
-	
+public class DeleteStudentDemo {
 	public static void main(String[] args) {
 	//create session factory
     SessionFactory factory =new Configuration()
@@ -33,24 +31,15 @@ public class UpdateStudentDemo {
    	 Student mystudent =session.get(Student.class,studentId);
    	 
    	 
-   	 System.out.println("updated student: ");
-   	mystudent.setFirstName("uj");
-   			
-   	 //commit the transaction
-   	 session.getTransaction().commit();
-   	 System.out.println("Done ");
-   	 
-   	 
-   	 
-   	 /*******************/
-   	session=factory.getCurrentSession();
-   	 session.getTransaction();
-   	 
-   	 //update email for all students
-   	 System.out.println("update email for all students ");
-   	 session.updateQury("update student set email= 'code@gmail.com'")
-   	 .executeUpdate();
-   	 
+   	 System.out.println("delete student: ");
+   	session.delete(mystudent);
+   	
+   	/****************/
+    System.out.println("delete student id 2 ");
+    session.createQuery("delete from Student  where id =2")
+    .executeUpdate();
+   	
+   	
    	 //commit the transaction
    	 session.getTransaction().commit();
    	 System.out.println("Done ");

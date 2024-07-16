@@ -7,6 +7,9 @@ import com.mysql.cj.Session;
 import com.mysql.cj.xdevapi.SessionFactory;
 
 public class ReadStudentDemo {
+	
+	public static void main(String[] args) {
+	
 	//create session factory
 			SessionFactory factory =new Configuration()
 					.configure("hibernate.cfg.xml");
