@@ -36,10 +36,16 @@ public class GetInstractorDetailDemo {
 		        	 session.getTransaction().commit();
 		        	 System.out.println("Done ");
 		         }
+		         catch(Exception exc)
+		         {
+		        	 exc.printStackTrace();
+		         }
 		         finally {
+		        	 session.close();
+		         
 		        	 factory.close();
 		         }
 	
 	
 	
-}
+}}
