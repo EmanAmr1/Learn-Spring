@@ -27,7 +27,8 @@ public class InstructorDetail {
 
 	
 
-	@OneToOne(mappedBy="instructorDetail" , cascade=cascadeType.All)
+	@OneToOne(mappedBy="instructorDetail" , cascade= {cascadeType.DETACH,cascadeType.MERGE
+			,cascadeType.PRISIST,cascadeType.REFRESH})
 	private Instructor instructor;
 
 	
