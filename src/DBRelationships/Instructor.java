@@ -34,7 +34,8 @@ public class Instructor {
 		@OneToOne(cascade=CascadeType.All)
 		@JoinColumn(name="Instructor_detail_id")
 		private InstructorDetail  InstructorDetail;
-
+		
+		
 		public Instructor() {
 			
 		}
@@ -44,8 +45,6 @@ public class Instructor {
 			this.lastName = lastName;
 			this.email = email;
 		}
-
-
 
 
 

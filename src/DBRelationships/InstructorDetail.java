@@ -26,6 +26,13 @@ public class InstructorDetail {
 	private String hoppy;
 
 	
+
+	@OneToOne(mappedBy="instructorDetail" , cascade=cascadeType.All)
+	private Instructor instructor;
+
+	
+	
+	
 	
 	public InstructorDetail() {
 	
@@ -63,6 +70,14 @@ public class InstructorDetail {
 	@Override
 	public String toString() {
 		return "InstructorDetail [id=" + id + ", youtubeChannel=" + youtubeChannel + ", hoppy=" + hoppy + "]";
+	}
+
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
 	}
 	
 	
