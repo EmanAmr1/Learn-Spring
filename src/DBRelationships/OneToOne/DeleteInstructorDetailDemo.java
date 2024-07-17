@@ -1,4 +1,4 @@
-package DBRelationships;
+package DBRelationships.OneToOne;
 
 public class DeleteInstructorDetailDemo {
 	public static void main(String[] args) {

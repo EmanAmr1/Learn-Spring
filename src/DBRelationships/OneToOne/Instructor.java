@@ -1,4 +1,7 @@
-package DBRelationships;
+package DBRelationships.OneToOne;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -9,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import DBRelationships.OneToMany.Course;
 
 //annotate the class as an entity and map to db table
 @Entity
@@ -34,6 +39,17 @@ public class Instructor {
 		@OneToOne(cascade=CascadeType.All)
 		@JoinColumn(name="Instructor_detail_id")
 		private InstructorDetail  InstructorDetail;
+		
+		
+		
+		@OneToMany(mappedBy="instructor",cascade= {cascadeType.DETACH,cascadeType.MERGE
+                ,cascadeType.PRISIST,cascadeType.REFRESH})
+		private List<Course> courses;
+		
+		
+		
+		
+		
 		
 		
 		public Instructor() {
@@ -88,7 +104,22 @@ public class Instructor {
 		public void setId(int id) {
 			this.id = id;
 		}
+
+		public List<Course> getCourses() {
+			return courses;
+		}
+
+		public void setCourses(List<Course> courses) {
+			this.courses = courses;
+		}
 	
-	
+	//add convenience methods for bi-directional relationship
+		public void add(Course tempCourse) {
+			if(courses == null) {
+				courses =new ArrayList<>();
+			}
+			courses.add(tempCourse);
+			tempCourse.setInstructor(this);
+		}
 	
 }

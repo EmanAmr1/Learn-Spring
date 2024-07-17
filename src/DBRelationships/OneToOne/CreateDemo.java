@@ -1,4 +1,4 @@
-package DBRelationships;
+package DBRelationships.OneToOne;
 
 import com.luv2code.hibernate.demo.Configuration;
 import com.luv2code.hibernate.demo.Session;

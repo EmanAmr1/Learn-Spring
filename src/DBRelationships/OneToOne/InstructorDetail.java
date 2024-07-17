@@ -1,4 +1,4 @@
-package DBRelationships;
+package DBRelationships.OneToOne;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
